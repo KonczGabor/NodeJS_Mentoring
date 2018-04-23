@@ -1,0 +1,32 @@
+{
+  "name": "node_training",
+  "version": "1.0.0",
+  "description": "This project's goal is to provide a basic knowledge from NodeJS through a couple of homework.",
+  "main": "app.js",
+  "scripts": {
+    "babel-node": "babel-node --presets=latest",
+    "start": "nodemon --exec npm run babel-node -- ./app.js",
+    "build": "babel src -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabor_Koncz",
+  "email": "Gabor_Koncz@epam.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.17.3"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "dependencies": {
+    "ts-json-properties": "^2.0.2"
+  }
+}
