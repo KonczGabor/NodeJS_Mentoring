@@ -7,20 +7,11 @@ export class DirWatcher extends EventEmitter {
         super();
         this.oldFiles = [];
     }
-
     watch(path, delay) {
-
         this.interval = setInterval(
             () => {
-
                 fs.readdir(path, (err, files) => {
-                    /*files.forEach(file => {
-                        console.log(file);
-                    });
-                    if (this.oldFiles != files) {
-                        console.log(this.oldFiles);
-                        console.log(files);
-                    }*/
+                
                     for (let i = 0; i < files.length; i++) {
                         if (files[i] !== this.oldFiles[i]) {
                             this.emit('changed', path + files[i]);
@@ -28,8 +19,6 @@ export class DirWatcher extends EventEmitter {
                     }
                     this.oldFiles = files;
                 });
-
-
             }, delay);
     }
 

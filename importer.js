@@ -6,7 +6,6 @@ const promisify = require('util');
 export class Importer {
 
     constructor(dirWatcher){
-        console.log('const_importer');
         dirWatcher.on('changed',(path) => {
             this.import(path);
             this.importSync(path);
