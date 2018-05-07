@@ -23,7 +23,7 @@ export class DirWatcher extends EventEmitter {
                     }*/
                     for (let i = 0; i < files.length; i++) {
                         if (files[i] !== this.oldFiles[i]) {
-                            this.emit('changed', files[i]);
+                            this.emit('changed', path + files[i]);
                         }
                     }
                     this.oldFiles = files;
